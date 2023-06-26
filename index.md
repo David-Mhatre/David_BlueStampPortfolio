@@ -12,7 +12,7 @@ You should comment out all portions of your portfolio that you have not complete
 | David M | Menlo School | Computer Engineering | Incoming junior
 
 
-![Headstone Image](David Headshot.png)
+![Headstone Image](DavidHeadshot.png)
   
 # Final Milestone
 
