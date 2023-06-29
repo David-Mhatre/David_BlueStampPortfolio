@@ -1,9 +1,6 @@
 # Tiny Wanderer Table Top Robot
 The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling of the edge utilizing a hand built pcb to control all the parts. 
 
-```HTML 
-
-```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
