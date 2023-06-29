@@ -1,5 +1,5 @@
 # Tiny Wanderer Table Top Robot
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails
+The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling of the edge utilizing a hand built pcb to control all the parts. 
 
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
