@@ -1,5 +1,5 @@
 # Tiny Wanderer Table Top Robot
-The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling off the edge. Utilizing a hand built pcb to control all the parts. 
+The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling off the edge. Utilizing a hand built PCB to control all the parts. It houses two servos to provide power to the wheels and a third unpowered wheel to stabilize. The brians of the robot come from one 85 attiny microcontroller.
 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
@@ -46,7 +46,7 @@ My first milestone was to construct the chassis of the little wanderer robot, wh
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xJU1WLDTIho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For my first project, I made the useless machine, a machine that, when you click the switch, an arm comes out and turns the switch off; it uses a PCB to link the switch, a battery pack, and a motor; and it uses a PCB to connect the switch, a battery pack, and a motor. One of the most challenging aspects of this project was ensuring that all of the soldering was accurate and flush with the PCB, since if it wasn't, the project would still function but portions would not work.
+For my first project, I made the useless machine, a machine that, when you click the switch, an arm comes out and turns the switch off; it uses a PCB to link the switch, a battery pack, and a motor; and it uses a PCB to connect the switch, a battery pack, and a motor. One of the most challenging aspects of this project was ensuring that all of the soldering was accurate and flush with the PCB, since if it wasn't, the project would still function but portions would not work. It provided a good entry point to my project as it requires me to build my own PCB uses jumper wires and solder bridges so it gave me some practice just soldering and getting parts where they need to be.
 
 <!--- 
 # Schematics 
