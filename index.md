@@ -1,5 +1,5 @@
 # Tiny Wanderer Table Top Robot
-The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling off the edge. Utilizing a hand built PCB to control all the parts. It houses two servos to provide power to the wheels and a third unpowered wheel to stabilize. The brians of the robot come from one 85 attiny microcontroller.
+The Tiny Wanderer roves around any table top or surface with edges and uses IR LED's and IR Photo Resistors to calculate distance to prevent it from falling off the edge. Utilizing a hand built PCB to control all the parts. It houses two servos to provide power to the wheels and a third unpowered wheel to stabilize. The brains of the robot come from one 85-attiny microcontroller.
 
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
@@ -37,26 +37,93 @@ My first milestone was to construct the chassis of the little wanderer robot, wh
 
 For my first project, I made the useless machine, a machine that, when you click the switch, an arm comes out and turns the switch off; it uses a PCB to link the switch, a battery pack, and a motor; and it uses a PCB to connect the switch, a battery pack, and a motor. One of the most challenging aspects of this project was ensuring that all of the soldering was accurate and flush with the PCB, since if it wasn't, the project would still function but portions would not work. It provided a good entry point to my project as it requires me to build my own PCB uses jumper wires and solder bridges so it gave me some practice just soldering and getting parts where they need to be.
 
-<!--- 
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+This is the code for my project; it is pretty short with just one big contextual statement that makes the decision between going forward, left, right, or back, as well as gathering the data from the sensors to make this decision.
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+c++
+// Include the Servo library 
+#include <Servo.h> 
+// Create a servo object 
+Servo Servo1, Servo2; 
+
+// defines pins numbers
+const int rtrigPin = 7;
+const int rechoPin = 8;
+const int ltrigPin = 4;
+const int lechoPin = 5;
+// defines variables
+long rduration;
+long lduration;
+int rdistance;
+int ldistance;
+
+void setup() { 
+   // We need to attach the servo to the used pin number 
+   Servo1.attach(9);
+   Servo2.attach(10); 
+   pinMode(rtrigPin, OUTPUT); // Sets the trigPin as an Output
+   pinMode(rechoPin, INPUT); // Sets the echoPin as an Input
+   pinMode(ltrigPin, OUTPUT); // Sets the trigPin as an Output
+   pinMode(lechoPin, INPUT); // Sets the echoPin as an Input
+   Serial.begin(9600); // Starts the serial communication
+}
+void loop(){ 
+  // Clears the trigPin
+  digitalWrite(rtrigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(rtrigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(rtrigPin, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  rduration = pulseIn(rechoPin, HIGH);
+
+  // Clears the trigPin
+  digitalWrite(ltrigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(ltrigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(ltrigPin, LOW);
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  lduration = pulseIn(lechoPin, HIGH);
+  // Calculating the distance
+  rdistance = rduration * 0.034 / 2;
+  ldistance = lduration * 0.034 / 2;
+  // Prints the distance on the Serial Monitor
+  Serial.println(rdistance);
+  Serial.println(ldistance);
+  if (rdistance < 10 && ldistance < 10){
+    // If the sensors both read on the table goes forward
+    Servo1.write(100);
+    Servo2.write(80);
+    delayMicroseconds(1000);
+  } 
+  else if (!(ldistance < 10) && rdistance < 10){
+      // Turns back right if the left side is over the edge
+      Servo1.write(90);
+      Servo2.write(100);
+      delayMicroseconds(1000);
+  } 
+  else if (ldistance < 10 && !(rdistance < 10)){ 
+      // Turns back left if the right side is over the edge
+      Servo2.write(90);
+      Servo1.write(80);
+      delayMicroseconds(1000);
+  } 
+  else{
+    // If both sensors are over the edge go backwards
+    Servo1.write(80);
+    Servo2.write(100);
+    delayMicroseconds(1000);
+  }
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-```
-
+<!--- 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
