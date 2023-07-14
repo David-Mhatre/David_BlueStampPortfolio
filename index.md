@@ -44,6 +44,7 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 # Code
 This is the code for my project; it is pretty short with just one big contextual statement that makes the decision between going forward, left, right, or back, as well as gathering the data from the sensors to make this decision.
 
+```
 c++
 // Include the Servo library 
 #include <Servo.h> 
@@ -122,6 +123,7 @@ void loop(){
     delayMicroseconds(1000);
   }
 }
+```
 
 <!--- 
 # Bill of Materials
