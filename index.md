@@ -39,7 +39,7 @@ For my first project, I made the useless machine, a machine that, when you click
 
 
 # Schematics 
-![Headstone Image](ScreenShot 2023-07-14 at 12.12.53 PM.png)
+![Headstone Image](CircuitDiagram.png)
 
 # Code
 This is the code for my project; it is pretty short with just one big contextual statement that makes the decision between going forward, left, right, or back, as well as gathering the data from the sensors to make this decision.
