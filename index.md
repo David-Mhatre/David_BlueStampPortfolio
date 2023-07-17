@@ -14,7 +14,7 @@ The Tiny Wanderer roves around any table top or surface with edges and uses IR L
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SZJ_4FntxYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My final milestone was the culmination of all my hard work. After getting the servos to move, I went to try and get the servos working. I ran into an interesting error where, despite the wiring being correct, one of my sensors would read and the other wouldn't. I then figured out that sensors used with an Arduino have to be used one after another. After getting all of my components set up and working, it was time for the code, which proved challenging in its own right because of how the servos are controlled. It became a bit confusing to know how the sensors would work. Overall, this third milestone took a lot of testing because the values had to be fine-tuned to make sure the momentum of the rbobot didn't carry it off the table. This, combined with anything coming unplugged, meant the sensors would read zero and mess up my code. This really tested my sensitivity and provided a satisfying challenge to complete.
+My final milestone was the culmination of all my hard work. After getting the servos to move, I went to try and get the servos working. I ran into an interesting error where, despite the wiring being correct, one of my sensors would read and the other wouldn't. I then figured out that sensors used with an Arduino have to be used one after another. After getting all of my components set up and working, it was time for the code, which proved challenging in its own right because of how the servos are controlled. It became a bit confusing to know how the sensors would work. Overall, this third milestone took a lot of testing because the values had to be fine-tuned to make sure the momentum of the robot didn't carry it off the table. This, combined with anything coming unplugged, meant the sensors would read zero and mess up my code. This really tested my sensitivity and provided a satisfying challenge to complete.
 
 
 # Second Milestone
@@ -42,7 +42,7 @@ For my first project, I made the useless machine, a machine that, when you click
 ![Headstone Image](CircuitDiagram.png)
 
 # Code
-This is the code for my project; it is pretty short with just one big contextual statement that makes the decision between going forward, left, right, or back, as well as gathering the data from the sensors to make this decision.
+This is the code for my project; it is pretty short with just one big condtional statement that makes the decision between going forward, left, right, or back, as well as gathering the data from the sensors to make this decision. 
 
 ```
 c++
