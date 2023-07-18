@@ -6,4 +6,4 @@ CircuitLayout shows the connections you would need to make with all parts withou
 
 CircuitDiagram shows the circuit using an arduino
 
-TinyWanderer sketch is the code for the arduino to make it run
+TinyWanderer sketch is the code for the arduino to make it run  
