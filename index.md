@@ -9,6 +9,11 @@ The Tiny Wanderer roves around any table top or surface with edges and uses IR L
 
 ![Headstone Image](DavidHeadshot.png)
 
+# Mods
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R8zIvkYn7kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+
+For my modifications, I chose to add another sensor onto to my robot so that as well as avoid falling of the edge of tables it could avoid running into objects on the table top
   
 # Final Milestone
 
