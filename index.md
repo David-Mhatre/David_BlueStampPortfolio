@@ -13,7 +13,7 @@ The Tiny Wanderer roves around any table top or surface with edges and uses IR L
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R8zIvkYn7kQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 
-For my modifications, I chose to add another sensor onto to my robot so that as well as avoid falling of the edge of tables it could avoid running into objects on the table top
+For my modifications, I chose to add another sensor to my robot so that, as well as avoiding falling off the edge of tables, it could avoid running into objects on the table top using a forward-facing sensor to detect the distance in front of the robot. This was somewhat difficult because first I had to figure out how to add another sensor into my code and make sure that I got data as well as the other two sensors, as well as changing my conditional statement so that it could take the forward-facing distance into consideration and figure out which way to turn. At the same time, this modification was quite intuitive because it felt like adding to the existing structure rather than completely changing it. Overall, this project took a long time and provided a lot of opportunities to learn and grow.
   
 # Final Milestone
 
